@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#CCCCCC"
+              android:orientation="vertical"
+              android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btn_edit_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#26A69A"
+            android:onClick="onEditTime"
+            android:padding="10dp"
+            android:text="Edit Time"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_stop_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#D34836"
+            android:onClick="onControlTime"
+            android:padding="10dp"
+            android:text="Stop Time"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Time Left"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="00 : 00 Min"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FF0000"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/btn_lamp"
+        android:layout_width="30dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:onClick="onTurnOnOffLight"
+        android:src="@drawable/lamp_image_light"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal">
+
+        <RelativeLayout
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/white_radius"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_play"
+                android:onClick="onControlSession"/>
+
+            <Button
+                android:id="@+id/btn_prev"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/btn_backward"
+                android:onClick="onControlSession"/>
+
+            <Button
+                android:id="@+id/btn_pause"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_pause"
+                android:onClick="onControlSession"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_forward"
+                android:onClick="onControlSession"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/white_radius"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to slide:  "
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <EditText
+            android:id="@+id/txt_go_to_slide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/white_radius"
+            android:ems="10"
+            android:inputType="number"/>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/green_radius"
+            android:onClick="onGoToSlide"
+            android:text="Go"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

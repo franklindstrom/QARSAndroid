@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="7"
+            android:background="#CCCCCC">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mark"/>
+
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="100dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_logout"
+                android:onClick="onLogout"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="4"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/question_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select your answer"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp">
+
+                <RadioButton
+                    android:id="@+id/radio_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"/>
+
+            </RadioGroup>
+
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="2"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:id="@+id/question_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"/>
+            </ScrollView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="9"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/btn_next_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/green_radius"
+                android:onClick="onNextQuestion"
+                android:text="Next Question"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_try_again"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/green_radius"
+                android:onClick="onTryAgain"
+                android:text="Try Again"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/green_radius"
+                android:onClick="onAnswer"
+                android:text="Vote to Server"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/connection_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="#000000">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/connection_loading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Connecting to server..."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+</RelativeLayout>

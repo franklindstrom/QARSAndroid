@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:background="#CCCCCC">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/mark"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/login_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="#3B5998"
+                android:padding="8dp">
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/facebook_login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:alpha="0"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Connect with Facebook"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/facebook_icon"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_google"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="#D34836"
+                android:padding="8dp">
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/google_login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:alpha="0"/>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Connect with Google+"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/google_plus_icon"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_twitter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="#00ACED"
+                android:padding="8dp">
+
+                <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                    android:id="@+id/twitter_login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:alpha="0"/>
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Connect with Twitter"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/twitter_icon"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/login_linked"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:background="#0077B5"
+                android:padding="8dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Connect with LinkedIn"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/linked_in_icon"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="-  OR  -"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#999999"
+                    android:textStyle="italic"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/white_radius"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp">
+
+                    <EditText
+                        android:id="@+id/txt_user_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/white_radius"
+                        android:hint="Your Email Address"
+                        android:inputType="textEmailAddress"
+                        android:textAlignment="center"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:background="#2E7DB3"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="Sign In"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/connection_loading_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        android:background="#000000">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            app:indicator="BallSpinFadeLoader"
+            app:indicator_color="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/connection_loading_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Connecting to server..."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"/>
+    </RelativeLayout>
+</RelativeLayout>
